@@ -1,0 +1,73 @@
+.menu-item {
+  min-width: 30%;
+  height: 240px;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 0 7.5px 15px;
+  overflow: hidden;
+
+  &.large {
+    height: 380px;
+  }
+
+  &:first-child {
+    margin-right: 7.5px;
+  }
+
+  &:last-child {
+    margin-left: 7.5px;
+  }
+
+  .background-image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* This worrks because of a quirk of Flex. When a flex item is given position absolute but not provided a top, bottom, left, or right 
+     positioning instructions it will just act like a normal flex item being positioned by flex keywords ( in this case center ).
+     However since absolute takes it outside of nroaml page flow, normal in this case is placing it right on top of the background image container
+     as if it didn't exist. Nice.   */
+  .content {
+    height: 90px;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    text-transform: uppercase;
+    position: absolute;
+
+    .title {
+      font-weight: bold;
+      margin-bottom: 6px;
+      font-size: 22px;
+      color: #4a4a4a;
+    }
+
+    .subtitle {
+      font-weight: 1;
+      font-size: 16px;
+    }
+
+    background-color: rgba(255, 255, 255, 0.87);
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    & .background-image {
+      transform: scale(1.1);
+      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    }
+
+    & .content {
+      opacity: 0.9;
+    }
+  }
+}
