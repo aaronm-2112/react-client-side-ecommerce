@@ -1,14 +1,6 @@
 import { createSelector } from "reselect";
 import memoize from "lodash.memoize";
 
-const COLLECTION_ID_MAP = {
-  hats: 1,
-  sneakers: 2,
-  jackets: 3,
-  womens: 4,
-  mens: 5,
-};
-
 const selectShop = (state) => state.shop;
 
 const selectShopCollection = createSelector(
@@ -31,6 +23,11 @@ export const selectCollectionsForPreview = createSelector(
 export const selectisCollectionFetching = createSelector(
   [selectShop],
   (shop) => shop.isFetching
+);
+
+export const selectIsCollectionsLoaded = createSelector(
+  [selectShop],
+  (shop) => !!shop.collections // turns all falsys to false. Any object is true. Since our collections is default null this works
 );
 
 export default selectShopCollection;
