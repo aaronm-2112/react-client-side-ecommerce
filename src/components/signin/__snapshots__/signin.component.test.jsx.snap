@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders the signin component 1`] = `
+<div
+  className="sign-in"
+>
+  <h2>
+    I already have an account
+  </h2>
+  <span>
+    Sign in with your email and password
+  </span>
+  <form
+    onSubmit={[Function]}
+  >
+    <FormInput
+      handleChange={[Function]}
+      id="email"
+      label="email"
+      name="email"
+      required={true}
+      type="email"
+      value=""
+    />
+    <FormInput
+      handleChange={[Function]}
+      label="password"
+      name="password"
+      required={true}
+      type="password"
+      value=""
+    />
+    <div
+      className="buttons"
+    >
+      <CustomButton
+        type="submit"
+        value="Submit Form"
+      >
+        Sign In
+      </CustomButton>
+      <CustomButton
+        isGoogleSignIn={true}
+        onClick={[Function]}
+        type="button"
+      >
+        Sign In With Google
+      </CustomButton>
+    </div>
+  </form>
+</div>
+`;

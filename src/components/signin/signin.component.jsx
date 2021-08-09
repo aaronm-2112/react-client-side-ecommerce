@@ -24,7 +24,7 @@ class SignIn extends React.Component {
       await auth.signInWithEmailAndPassword(email, password);
       this.setState({ email: "", password: "" });
     } catch (e) {
-      console.error(e);
+      console.error(e.message);
     }
   };
 
@@ -47,6 +47,7 @@ class SignIn extends React.Component {
             handleChange={this.handleChange}
             value={this.state.email}
             label="email"
+            id="email"
             required
           />
 
