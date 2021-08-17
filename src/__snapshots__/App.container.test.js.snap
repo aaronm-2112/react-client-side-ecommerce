@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MapStateToProps and MapDispatchToProps tests for the App component App snapshot matches 1`] = `
+<ContextProvider
+  value={null}
+>
+  <App
+    currentUser={1}
+    setCurrentUser={[Function]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  />
+</ContextProvider>
+`;
